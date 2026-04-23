@@ -28,8 +28,8 @@ function Login() {
             //console.log("data是", res);
         }).catch((err) => {
             setLoading(false);
-            console.log(err.message);
-            console.log(err);
+            //console.log(err.message);
+            //console.log(err);
         })
     }
 

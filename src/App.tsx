@@ -23,7 +23,7 @@ function App() {
         myRouters[0].children = routers;
         myRouters[0].children[0].index = true
         const route = createBrowserRouter(myRouters);
-        console.log("111", myRouters);
+        //console.log("111", myRouters);
         setRouter(route);
       } else {
         const route = createBrowserRouter(routes);

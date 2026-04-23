@@ -13,7 +13,7 @@ export function generateRoutes(menu: MenuType[]):RouteObject[] {
             element: componentMap[item.key]
         };
         if (item.children) {
-            routerObj.children = generateRoutes(item.children)
+            routerObj.children = generateRoutes(item.children)//递归调用
         }
         return routerObj
     })

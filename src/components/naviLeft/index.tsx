@@ -17,7 +17,7 @@ export default function NaviLeft() {
   async function configMenu() {
     //const { data } = await getMenu();
     //dispatch(setMenu(data));
-    console.log(menuList);
+    //console.log(menuList);
     const mappedMenuItems = mapMenuItems(menuList);
     setMenuData(mappedMenuItems);
   }
@@ -37,7 +37,7 @@ export default function NaviLeft() {
   }
 
   function handleClick({key}: {key: string}) {
-    console.log(key);
+    //console.log(key);
     navigate(key)
   }
 

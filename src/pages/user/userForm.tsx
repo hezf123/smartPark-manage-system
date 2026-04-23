@@ -17,12 +17,12 @@ export default function UserForm(props: FormProps) {
         form.validateFields().then(async (res) => {
             const {data} = await editUser(res);
             message.success(data);
-            console.log(data);
+            //console.log(data);
             hiddenModal();
             loadData();
         })
         .catch((err) => {
-            console.log(err);
+            //console.log(err);
         })
     }
     useEffect(() => {

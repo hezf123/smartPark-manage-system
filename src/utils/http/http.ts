@@ -9,7 +9,7 @@ const http: AxiosInstance = axios.create({
 
 //请求拦截器
 http.interceptors.request.use((config:InternalAxiosRequestConfig) => {
-    console.log("config", config);
+    //console.log("config", config);
     const {token} = store.getState().authSlice;
     if (token) {
         //Authorization专门用来携带认证信息
@@ -22,7 +22,7 @@ http.interceptors.request.use((config:InternalAxiosRequestConfig) => {
 //响应拦截器
 
 http.interceptors.response.use((response:AxiosResponse) => {
-    console.log("response", response);
+    //console.log("response", response);
     const res = response.data;
     if (res.code !== 200) {
         message.error(res.code + ":" + res.message);

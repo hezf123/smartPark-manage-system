@@ -115,7 +115,7 @@ export default function Dashboard() {
     useEffect(() => {
         const loadData = async () => {
             const { data: apiData } = await getEnergyData();
-            console.log('data', apiData);
+            //console.log('data', apiData);
             const dataList = apiData.map((item: any) => ({
                 name: item.name,
                 data: item.data,

@@ -155,7 +155,7 @@ function Bill(){
     const [selectedRowKeys,setSelectedRowKeys]=useState<React.Key[]>([])
     const [selectedRows,setSelectedRows]=useState<any>({accountNo:""})
     const handleChange=(value:any,dateString:any)=>{
-        console.log(value,dateString)
+        //console.log(value,dateString)
         setFormData(prevState=>({
             ...prevState,
             date:dateString
@@ -176,7 +176,7 @@ function Bill(){
     }
 
     const onSelectChange=(selectedRowKeys:React.Key[],selectedRows:any)=>{
-        console.log(selectedRows)
+        //console.log(selectedRows)
         setSelectedRowKeys(selectedRowKeys)
         setSelectedRows(selectedRows)
     }

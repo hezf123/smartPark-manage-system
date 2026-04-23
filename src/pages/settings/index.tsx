@@ -136,7 +136,7 @@ function extractTreeKeys(data:any){
 function Settings() {
     const AuthButton:React.FC<any>=withPermissions(['delete'],JSON.parse(sessionStorage.getItem("btnAuth") as string))(Button)
 
-    console.log(111111,sessionStorage.getItem("btnAuth"));
+    //console.log(111111,sessionStorage.getItem("btnAuth"));
     
     const edit=(menu:MenuType[],accountName:string)=>{
             setAccountName(accountName);
@@ -205,7 +205,7 @@ function Settings() {
     },[])
    
     const handle=()=>{
-        console.log(checkedKeys,accountName)
+        //console.log(checkedKeys,accountName)
     }
    const onCheck:TreeProps['onCheck']=(checkedKeys)=>{
     setCheckedKeys(checkedKeys as React.Key[])

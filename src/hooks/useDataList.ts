@@ -22,7 +22,7 @@ function useDataList<T extends MyFormData,U>(initialFormData:T,fetchData:DataFet
             setTotal(total)
         }catch(error){
 
-            console.log(error)
+            //console.log(error)
         }finally{
 
             setLoading(false)

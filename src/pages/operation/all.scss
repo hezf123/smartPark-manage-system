@@ -1,0 +1,24 @@
+.carousel-container {
+  padding: 40px 20px; /* 给左右箭头留出空间 */
+}
+
+.card-wrapper {
+  padding: 0 8px; /* antd 轮播内部 item 使用 padding 实现间距 */
+  box-sizing: border-box;
+}
+
+/* 覆盖 antd Carousel 的箭头样式使其更明显，可按需调整 */
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next {
+  width: 0px;
+  margin: 10px -10px -20px -20px;
+  height: 30px;
+  color: #333;
+  z-index: 2;
+}
+
+.ant-carousel .slick-prev::before,
+.ant-carousel .slick-next::before {
+  color: #333; /* 箭头颜色 */
+  font-size: 24px;
+}

@@ -1,5 +1,4 @@
 import { Card, Row, Col, Input, Button, Table, Pagination, Tag, Popconfirm, message } from "antd";
-import type { PopconfirmProps } from 'antd';
 import type { TableProps } from 'antd';
 import { useState, useEffect, useMemo, useCallback } from "react";
 import type { DataType } from "./interface";
@@ -38,7 +37,7 @@ export default function Users() {
         setLoading(true);
         const { data: { list, total } } = await getUserList({ ...formData, page, pageSize });
         setLoading(false);
-        console.log("列表信息", list);
+        //console.log("列表信息", list);
         setTotal(total);
         setDataList(list)
     }
@@ -61,7 +60,7 @@ export default function Users() {
     }
 
     const onChange: PaginationProps['onChange'] = (page, pageSize) => {
-        console.log(page, pageSize);
+        //console.log(page, pageSize);
         setPage(page);
         setpageSize(pageSize)
     }
@@ -75,7 +74,7 @@ export default function Users() {
     const confirm = async function (id: string) {
         const { data } = await deleteUser(id);
         message.success(data);
-        console.log("删除的是:", data);
+        //console.log("删除的是:", data);
         loadData();
 
     }

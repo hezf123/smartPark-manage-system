@@ -20,7 +20,7 @@ function findBreadCrumbPath(path: string, menuItems: MenuItem[]): string[] {
                 break;
             }
         }
-        console.log(pathSegments);
+        //console.log(pathSegments);
 
         return pathSegments
     }
@@ -30,7 +30,7 @@ export default function MyBreadCrumb() {
     const location = useLocation();
     const { menuList } = useSelector((state: any) => state.authSlice);
     const breabList = findBreadCrumbPath(location.pathname, menuList).map(item => ({ title: item }));
-    console.log('bbb', breabList);
+    //console.log('bbb', breabList);
 
 
     return <div>    <Breadcrumb items={breabList} className="mt mb" /></div>
